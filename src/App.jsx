@@ -1,5 +1,6 @@
 import './App.css';
 import Button from './components/Button/Button';
+import CardButton from './components/CardButton/CardButton';
 import JournalItem from './components/JournalItem/JournalItem';
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
             title: 'Поход в горы',
             text: 'Думал, что очень много времени',
             date: new Date()
-        
+          
         }
     ];
 
@@ -24,11 +25,14 @@ function App() {
             <h1>Заголовок</h1>
             <p>Текст</p>
             <Button />
-            <JournalItem
-                title={data[0].title}
-                text={data[0].text}
-                date={data[0].date}
-            />
+            <CardButton>
+                <JournalItem
+                    title={data[0].title}
+                    text={data[0].text}
+                    date={data[0].date}
+                />
+            </CardButton>
+
             <JournalItem
                 title={data[1].title}
                 text={data[1].text}
