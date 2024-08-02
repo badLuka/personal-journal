@@ -1,12 +1,14 @@
 import './CardButton.css';
 
-function CardButton({ children }) {
+function CardButton({ children, className }) {
 
-    return (
-        <button className='card-button'>
-            {children}
-        </button>
-    );
+	const cl = 'card-button' + (className ? ' ' + className : '');
+
+	return (
+		<button className={cl}>
+			{children}
+		</button>
+	);
 }
 
 export default CardButton;
